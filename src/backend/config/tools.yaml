@@ -1,0 +1,4 @@
+llamahub:
+  wikipedia.WikipediaToolSpec: {}
+local:
+  duckduckgo: {}
