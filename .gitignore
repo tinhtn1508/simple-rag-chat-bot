@@ -162,5 +162,4 @@ cython_debug/
 #.idea/
 
 src/backend/.gitignore
-src/backend/data
 src/frontend/.gitignore
