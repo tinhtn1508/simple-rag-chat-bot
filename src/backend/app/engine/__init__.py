@@ -9,13 +9,13 @@ from llama_index.postprocessor.cohere_rerank import CohereRerank
 
 def get_chat_engine(filters=None, params=None):
     system_prompt = os.getenv("SYSTEM_PROMPT")
-    top_k = os.getenv("TOP_K", "3")
+    top_k = os.getenv("SIMILARITY_TOP_K", "5")
     tools = []
     # Add query tool if index exists
     index = get_index()
     if index is not None:
         query_engine = index.as_query_engine(
-            similarity_top_k=int(top_k),
+            similarity_top_k=5,
             filters=filters,
             node_postprocessors= [get_reranker()] if os.getenv("COHERE_API_KEY") != "" else None,
         )
@@ -34,7 +34,7 @@ def get_chat_engine(filters=None, params=None):
 
 def get_reranker() -> BaseNodePostprocessor:
     api_key = os.getenv("COHERE_API_KEY")
-    top_k = int(os.getenv("TOP_K", "3"))
+    top_k = int(os.getenv("RERANK_TOP_K", "3"))
     if api_key is None:
         raise ValueError(
             "Please set your COHERE_API_KEY. Get it from https://dashboard.cohere.com/api-keys"
