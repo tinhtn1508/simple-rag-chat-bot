@@ -17,7 +17,7 @@ def get_chat_engine(filters=None, params=None):
         query_engine = index.as_query_engine(
             similarity_top_k=int(top_k),
             filters=filters,
-            node_postprocessors=[get_reranker()],
+            node_postprocessors= [get_reranker()] if os.getenv("COHERE_API_KEY") != "" else None,
         )
         query_engine_tool = QueryEngineTool.from_defaults(query_engine=query_engine)
         tools.append(query_engine_tool)
