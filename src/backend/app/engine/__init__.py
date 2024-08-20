@@ -9,7 +9,7 @@ from llama_index.postprocessor.cohere_rerank import CohereRerank
 
 def get_chat_engine(filters=None, params=None):
     system_prompt = os.getenv("SYSTEM_PROMPT")
-    top_k = os.getenv("SIMILARITY_TOP_K", "5")
+    top_k = int(os.getenv("SIMILARITY_TOP_K", "5"))
     tools = []
     # Add query tool if index exists
     index = get_index()
