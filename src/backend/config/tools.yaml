@@ -2,3 +2,4 @@ llamahub:
   wikipedia.WikipediaToolSpec: {}
 local:
   duckduckgo: {}
+  weather: {}

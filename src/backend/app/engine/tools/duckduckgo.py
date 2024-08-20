@@ -1,6 +1,5 @@
 from llama_index.core.tools.function_tool import FunctionTool
 
-
 def duckduckgo_search(
     query: str,
     region: str = "wt-wt",
