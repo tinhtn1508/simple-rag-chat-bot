@@ -12,10 +12,10 @@ export default function Header() {
           href="https://www.llamaindex.ai/"
           className="flex items-center justify-center font-nunito text-lg font-bold gap-2"
         >
-          <span>Built by LlamaIndex</span>
+          <span>Built by Chotot</span>
           <Image
             className="rounded-xl"
-            src="/llama.png"
+            src="/chotot.jpg"
             alt="Llama Logo"
             width={40}
             height={40}
