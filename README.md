@@ -15,6 +15,15 @@ make build
 Prepare the environment:
 Create a `.env` file in the backend and frontend directory and add the following environment sample file. After that, replace the values with your own values.
 
+## Prepare data
+```
+make data
+```
+
+## Embedding
+```
+make generate
+```
 
 ## Run backend
 ```
