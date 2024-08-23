@@ -6,6 +6,7 @@ This is a simple chat bot that uses the RAG model to generate responses. The RAG
 - Install poetry
 - Install npx
 - Install pnpm
+- Install fnm
 
 ## Installation
 ```
