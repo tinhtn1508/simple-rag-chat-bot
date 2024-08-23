@@ -12,6 +12,10 @@ This is a simple chat bot that uses the RAG model to generate responses. The RAG
 make build
 ```
 
+Prepare the environment:
+Create a `.env` file in the backend and frontend directory and add the following environment sample file. After that, replace the values with your own values.
+
+
 ## Run backend
 ```
 make backend
