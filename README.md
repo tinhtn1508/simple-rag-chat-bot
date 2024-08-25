@@ -35,3 +35,6 @@ make backend
 ```
 make frontend
 ```
+
+## Report
+https://docs.google.com/document/d/1htiXmZwBRYdYTt1f3QnNXqIgWMlDzl7XG6jh8LSHj6g/edit?usp=sharing
